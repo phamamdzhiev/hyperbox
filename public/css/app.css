@@ -1,0 +1,15 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.boxes-wrapper {
+    outline: 2px solid red;
+}
+
+.boxes-wrapper .box {
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
