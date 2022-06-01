@@ -1,0 +1,25 @@
+.categories {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.categories .box-category {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: var(--main-color-lighter);
+    transition: background-color 175ms ease-in;
+}
+
+.categories .box-category a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.categories .box-category:hover {
+    background-color: var(--main-green);
+}

@@ -1,0 +1,53 @@
+.box-singleton {
+    background-color: #1f2643;
+    padding: 20px;
+}
+
+#box-actions .heading {
+    color: #fff;
+}
+
+.box-singleton #category {
+    color: #898995;
+    font-size: 12px;
+}
+
+#box-image-wrapper img {
+    transition: transform 150ms ease-in;
+    transform-origin: center center;
+}
+
+#box-image-wrapper:hover img {
+    transform: rotate(-7deg) scale(1.1);
+}
+
+.box-singleton #price {
+    padding: 5px;
+    background-color: var(--main-green);
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/*badges*/
+.badge {
+    top: 15px;
+    left: 15px;
+    color: white;
+    border-radius: 0;
+}
+.badge.hot {
+    background-color: var(--main-hot);
+}
+.badge.new {
+    background-color: #25942a;
+}
+.badge.featured {
+    background-color: rgb(61, 120, 157);
+}
+.badge.free {
+    background-color: rgb(229, 143, 11);
+}
+

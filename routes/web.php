@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.welcome');
+    return redirect('/homepage/boxes');
 });
+
+Route::get('/homepage/boxes', function () {
+    return view('layouts.welcome');
+})->name('default');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {

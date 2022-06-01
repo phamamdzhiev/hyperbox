@@ -13,6 +13,13 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 $(document).ready(function () {
   $('#js-item-price').on('change', function (e) {
     console.log(e.target.innerHTML);
+  }); //hamburger toggle
+
+  var hamburger = $('#hamburger');
+  var nav = $('#__nav-wrapper nav');
+  hamburger.click(function () {
+    $('body').toggleClass('out');
+    nav.toggleClass('active');
   });
 });
 

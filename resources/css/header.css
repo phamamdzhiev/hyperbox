@@ -1,0 +1,105 @@
+header#__main_header {
+    position: relative;
+    background-color: var(--main-color-dark)
+}
+
+#__nav-wrapper {
+    width: 100%;
+}
+
+#__nav-wrapper #hamburger {
+    display: none;
+    height: 20px;
+    width: 30px;
+    background-color: transparent;
+    margin: 20px 5px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#__nav-wrapper #hamburger .bar {
+    width: 90%;
+    height: 2px;
+    background-color: var(--grayish);
+    margin-left: auto;
+}
+
+#__nav-wrapper #hamburger .bar#bar-1 {
+    width: calc(90% - 8px);
+}
+
+#__nav-wrapper #hamburger .bar#bar-2 {
+    width: calc(90% - 4px);
+}
+
+#__nav-wrapper ul {
+    display: flex;
+    align-items: center;
+}
+
+#__nav-wrapper ul li {
+    margin: 0 15px;
+    color: var(--grayish);
+    display: flex;
+    align-items: center;
+    transition: color 175ms ease-in;
+}
+
+#__nav-wrapper ul li.active {
+    color: #3d789d;
+}
+
+#__nav-wrapper ul li.active a {
+    color: #3d789d;
+}
+
+#__nav-wrapper ul li a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--grayish);
+    display: inline-block;
+    margin-left: 10px;
+    padding: 20px 5px;
+    font-size: 14px;
+    transition: color 250ms ease-in;
+}
+
+#__nav-wrapper ul li:hover {
+    color: #3d789d;
+}
+
+#__nav-wrapper ul li:hover a {
+    color: #3d789d;
+}
+
+@media screen and (max-width: 768px) {
+    #__nav-wrapper {
+        justify-content: space-between;
+    }
+
+    #__nav-wrapper nav {
+        display: none;
+        position: absolute;
+        height: 100vh;
+        width: 75%;
+        top: 0;
+        left: 0;
+        background-color: var(--main-color-light);
+        box-shadow: rgba(0, 0, 0, 0.2) 0 8px 10px -5px, rgba(0, 0, 0, 0.14) 0 16px 24px 2px, rgba(0, 0, 0, 0.12) 0 6px 30px 5px;
+        z-index: 5000;
+    }
+
+    #__nav-wrapper nav ul {
+        flex-direction: column;
+    }
+
+    #__nav-wrapper nav.active {
+        display: block;
+    }
+
+    #__nav-wrapper #hamburger {
+        display: flex;
+    }
+
+}

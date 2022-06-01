@@ -1,14 +1,95 @@
+@import "header.css";
+@import "box-singleton.css";
+@import "categories.css";
+
+:root {
+    --main-color-dark: #171e31;
+    --main-color: #192036;
+    --main-color-light: #1f2643;
+    --main-color-lighter: #38405c;
+    --main-green: #4ebb54;
+    --main-hot: #db3232;
+    --white: #fff;
+    --grayish: #a8a8b2;
+    /*brps*/
+    --xxl: 1400px;
+    --xl: 1200px;
+    --lg: 992px;
+    --md: 768px;
+    --sm: 576px;
+}
+
+/*scrollbar custom styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--main-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-green);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Play', sans-serif;
+    background-color: var(--main-color);
+    color: var(--grayish);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.boxes-wrapper {
-    outline: 2px solid red;
+body.out {
+    overflow: hidden;
 }
 
-.boxes-wrapper .box {
-    height: 80px;
-    width: 80px;
-    border: 2px solid black;
-    margin: 10px;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    color: var(--grayish);
+}
+
+.homepage-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .homepage-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .homepage-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
