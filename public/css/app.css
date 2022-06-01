@@ -184,6 +184,69 @@ header#__main_header {
     background-color: var(--main-green);
 }
 
+footer#__footer {
+    background-color: var(--main-color-dark);
+    padding: 20px;
+}
+
+#instagram {
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(221.9133573153deg, #5646dc, #e0215e, #f8c75f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instagram svg {
+    max-width: 20px;
+}
+
+#shipping {
+    color: var(--grayish);
+}
+
+#shipping img {
+    display: block;
+    max-width: 100px;
+    margin: 10px auto;
+}
+
+#navi ul {
+    display: block;
+}
+
+#navi ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+#navi ul li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--grayish);
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+}
+
+#navi ul li a {
+    color: var(--grayish);
+    font-size: 14px;
+}
+
+#legal {
+    color: #4c5770;
+    font-size: 12px;
+}
+
 :root {
     --main-color-dark: #171e31;
     --main-color: #192036;

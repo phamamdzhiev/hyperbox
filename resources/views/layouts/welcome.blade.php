@@ -16,7 +16,7 @@
 </head>
 <body class="antialiased">
 @include('components.header')
-<div class="container-xxl">
+<div class="container-xxl mb-5">
     @yield('main')
     <h3 class="fw-bold text-white my-5">
         ВСИЧКИ КУТИИ
@@ -32,7 +32,7 @@
         @include('components.box-singleton')
     </div>
 </div>
-
+@include('components.footer')
 <script defer src="{{ asset('js/app.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

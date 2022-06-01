@@ -1,6 +1,7 @@
 @import "header.css";
 @import "box-singleton.css";
 @import "categories.css";
+@import "footer.css";
 
 :root {
     --main-color-dark: #171e31;
