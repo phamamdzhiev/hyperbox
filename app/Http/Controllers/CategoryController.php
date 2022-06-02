@@ -103,4 +103,8 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public static function getBoxesByCategory(Request $request) {
+        dd($request->all());
+    }
 }

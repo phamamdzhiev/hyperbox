@@ -18,19 +18,6 @@
 @include('components.header')
 <div class="container-xxl mb-5">
     @yield('main')
-    <h3 class="fw-bold text-white my-5">
-        ВСИЧКИ КУТИИ
-    </h3>
-    @include('components.categories')
-    <div class="homepage-wrapper">
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-        @include('components.box-singleton')
-    </div>
 </div>
 @include('components.footer')
 <script defer src="{{ asset('js/app.js')}}"></script>

@@ -301,10 +301,10 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-}
-
+a,
+a:active,
+a:focus,
+a:focus:hover,
 a:hover {
     text-decoration: none;
 }

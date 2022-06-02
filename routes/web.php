@@ -17,9 +17,8 @@ Route::get('/', function () {
     return redirect('/homepage/boxes');
 });
 
-Route::get('/homepage/boxes', function () {
-    return view('layouts.welcome');
-})->name('default');
+Route::get('/homepage/boxes', [\App\Http\Controllers\DefaultController::class, 'index'])
+    ->name('default');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
@@ -53,5 +52,15 @@ Route::get('/badges', [\App\Http\Controllers\BadgeController::class, 'index'])
     ->name('badges');;
 Route::post('/badge/add', [\App\Http\Controllers\BadgeController::class, 'store'])
     ->name('badge.add');
+
+//Affiliates
+Route::get('/affiliates', function () {
+    return view('affiliates');
+})->name('affiliates');;
+
+//how works
+Route::get('/how-to-play', function () {
+    return view('how-to-play');
+})->name('how.to.play');;
 
 require __DIR__ . '/auth.php';

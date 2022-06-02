@@ -1,6 +1,6 @@
 <div class="categories mb-5">
     <div class="box-category">
-        <a href="/" class="text-uppercase">
+        <a href="{{route('default', ['pedal'=>'yers'])}}" class="text-uppercase">
             ТЕХНИКА
         </a>
     </div>

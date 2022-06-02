@@ -9,11 +9,14 @@
         </a>
     </div>
     <div id="box-actions" class="mt-4">
-        <h6 class="fw-bold text-uppercase heading">Warning tape</h6>
+        <h6 class="fw-bold text-uppercase heading">{{$pedal}}</h6>
         <p id="category">Streetwear</p>
         <a href="/">
             <p id="price">
-                150.47 BGN
+                200 BGN
+                {{--                @foreach($price as $p)--}}
+                {{--                    {{$p->price}} BGN--}}
+                {{--                @endforeach--}}
             </p>
         </a>
     </div>
