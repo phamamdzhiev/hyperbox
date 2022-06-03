@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Badges;
+use App\Models\Badge;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -20,7 +20,7 @@ class BadgeController extends Controller
      */
     public function index(): View|Factory|Application
     {
-        $badges = Badges::all();
+        $badges = Badge::all();
         return view('auth.badges', compact('badges'));
     }
 
@@ -44,14 +44,12 @@ class BadgeController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'Name' => 'required',
-            'color' => 'required'
+            'Name' => 'required|unique:badges',
         ]);
 
         try {
-            Badges::create([
+            Badge::create([
                 'name' => strtoupper($request->input('Name')),
-                'color_hex' => $request->input('color')
             ]);
 
             return back()->with('status', 'Badge added!');

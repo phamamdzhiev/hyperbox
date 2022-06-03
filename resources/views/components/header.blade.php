@@ -3,7 +3,9 @@
         <div class="d-flex align-items-center justify-content-between inner-wrapper">
             <div id="__nav-wrapper" class="d-flex align-items-center">
                 <div id="__logo" class="me-5">
-                    <h4>{{env('APP_NAME')}}</h4>
+                    <a href="{{route('default')}}">
+                        <h4>{{env('APP_NAME')}}</h4>
+                    </a>
                 </div>
                 <nav>
                     <ul>
@@ -15,7 +17,7 @@
                             </svg>
                             <a href="/">Mystery Box</a>
                         </li>
-                        <li  class="{{ \Illuminate\Support\Facades\Route::currentRouteName() === 'affiliates' ? 'active' : ''}}">
+                        <li class="{{ \Illuminate\Support\Facades\Route::currentRouteName() === 'affiliates' ? 'active' : ''}}">
                             <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -29,7 +31,7 @@
                             </svg>
                             <a href="{{route('affiliates')}}">Афилиейти</a>
                         </li>
-                        <li  class="{{ \Illuminate\Support\Facades\Route::currentRouteName() === 'how.to.play' ? 'active' : ''}}">
+                        <li class="{{ \Illuminate\Support\Facades\Route::currentRouteName() === 'how.to.play' ? 'active' : ''}}">
                             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7 5V3H9V5H7ZM9 10H11V12H5V10H7V8H5V6H9V10Z"

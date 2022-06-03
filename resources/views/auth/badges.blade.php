@@ -20,11 +20,6 @@
                         <label for="Name" class="form-label">Name</label>
                         <input type="text" value="{{old('Name')}}" class="form-control" name="Name" id="Name">
                     </div>
-                    {{-- color hex--}}
-                    <div class="mb-3">
-                        <label for="color" class="d-block form-label">Color</label>
-                        <input type="color" name="color" id="color">
-                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -36,8 +31,6 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Color Hex</th>
-                            <th scope="col">Color Preview</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,8 +38,6 @@
                             <tr>
                                 <td>{{$badge->id}}</td>
                                 <td class="fw-bold text-uppercase">{{ strtoupper($badge->name) }}</td>
-                                <td>{{$badge->color_hex}}</td>
-                                <td style="background: {{$badge->color_hex}}"></td>
                             </tr>
                         @empty
                             <p>- N/A</p>

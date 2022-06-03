@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('shop_category_number');
             $table->string('owner_number');
             $table->string('owner_email');
+            $table->string('link');
+            $table->string('tracking_id');
         });
     }
 

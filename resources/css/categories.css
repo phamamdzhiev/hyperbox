@@ -20,6 +20,7 @@
 
 }
 
-.categories .box-category:hover {
+.categories .box-category:hover,
+.categories .box-category.active {
     background-color: var(--main-green);
 }

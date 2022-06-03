@@ -17,16 +17,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('price.list')}}">Price Lists</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="{{route('box.categories')}}">Categories</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('badges')}}">Badges</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('badges')}}">Badges</a>--}}
+{{--                    </li>--}}
 
                     <li class="nav-item">
                         <a class="nav-link" style="color: red" href="{{route('badges')}}">Logout</a>

@@ -2,18 +2,20 @@
 
 @section('main')
     <h3 class="fw-bold text-white my-5">
-        ВСИЧКИ КУТИИ
+        MYSTERY BOX
     </h3>
-    @include('components.categories')
+    @include('components.categories', [
+'categories' => $categories])
     <div class="homepage-wrapper">
         @forelse($boxes as $box)
-            {{--            {{dump($box)}}--}}
             @include('components.box-singleton', [
-    'pedal' => "test",
-    'price' => "test 2"
+    'title' => $box->title,
+    'price' => $box->price,
+    'category' => $box->category_name,
+    'badge' => $box->badge
 ])
         @empty
-            <p>No boxes found!</p>
+            <p>Няма намерени кутии!</p>
         @endforelse
     </div>
 @endsection

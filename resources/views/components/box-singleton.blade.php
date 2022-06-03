@@ -1,7 +1,9 @@
 <div class="box-singleton position-relative">
-    <div class="badge position-absolute text-uppercase hot">
-        HOT
-    </div>
+    @if(!is_null($badge))
+        <div class="badge position-absolute text-uppercase {{strtolower($badge)}}">
+            {{strtoupper($badge)}}
+        </div>
+    @endif
     <div id="box-image-wrapper">
         <a href="/">
             <img class="img-fluid"
@@ -9,15 +11,10 @@
         </a>
     </div>
     <div id="box-actions" class="mt-4">
-        <h6 class="fw-bold text-uppercase heading">{{$pedal}}</h6>
-        <p id="category">Streetwear</p>
+        <h6 class="fw-bold text-uppercase heading">{{$title}}</h6>
+        <p id="category">{{$category}}</p>
         <a href="/">
-            <p id="price">
-                200 BGN
-                {{--                @foreach($price as $p)--}}
-                {{--                    {{$p->price}} BGN--}}
-                {{--                @endforeach--}}
-            </p>
+            <p id="price">{{$price}} BGN</p>
         </a>
     </div>
 </div>

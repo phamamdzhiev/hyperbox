@@ -42,11 +42,7 @@ Route::get('/items', [\App\Http\Controllers\ItemController::class, 'index'])
     ->name('items');;
 Route::post('/item/add', [\App\Http\Controllers\ItemController::class, 'store'])
     ->name('item.add');;
-//Price lists
-Route::get('/price-list', [\App\Http\Controllers\PriceListController::class, 'index'])
-    ->name('price.list');;
-Route::post('/price-list-add', [\App\Http\Controllers\PriceListController::class, 'store'])
-    ->name('price.list.add');
+
 //Badges
 Route::get('/badges', [\App\Http\Controllers\BadgeController::class, 'index'])
     ->name('badges');;

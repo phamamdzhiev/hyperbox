@@ -37,32 +37,20 @@
                         <select class="form-select" name="item_box" id="item">
                             @foreach($items as $item)
                                 <option id="2" value="{{$item->id}}">({{$item->id}}) {{$item->title}}
-                                    - {{$item->price . ' BGN'}} - кат. номер {{$item->shop_category_number}}</option>
+                                    - {{$item->price . ' BGN'}} - кат. номер {{$item->shop_badge_number}}</option>
                             @endforeach
                         </select>
                     </div>
                     {{--                    Price --}}
                     <div class="mb-3">
-                        <label for="js-item-price">Box price</label>
-                        <select class="form-select" name="price_list" id="js-item-price">
-                            @foreach($priceListOptions as $price)
-                                <option id="{{$price->price}}" value="{{$price->id}}">{{$price->price}} BGN</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    {{--                    DIFF--}}
-
-                    <div>
-                        <span id="js-item-price"></span>
-                        <span id="js-price-list"></span>
-                        <span id="js-price-diff"></span>
+                        <label for="price">Box price</label>
+                        <input type="text" value="{{ old('price') }}" class="form-control" name="price" id="price">
                     </div>
 
                     {{--                    Category --}}
                     <div class="mb-3">
-                        <label for="item-category">Item category</label>
-                        <select class="form-select" name="item_category" id="item-category">
+                        <label for="item-box_category">Box category</label>
+                        <select class="form-select" name="box_category" id="item-box_category">
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}} (/{{$category->slug}})</option>
                             @endforeach
@@ -72,9 +60,10 @@
                     <div class="mb-3">
                         <label for="Badge">Badge</label>
                         <select class="form-select" name="badge" id="Badge">
+                            <option value="" selected class="text-uppercase">БЕЗ</option>
                             @foreach($badges as $badge)
-                                <option style="background: {{$badge->color_hex}}" class="text-uppercase"
-                                        value="{{$badge->id}}">{{$badge->name}}</option>
+                                <option class="text-uppercase"
+                                        value="{{$badge->name}}">{{strtoupper($badge->name)}}</option>
                             @endforeach
                         </select>
                     </div>

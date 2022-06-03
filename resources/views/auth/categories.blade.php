@@ -12,7 +12,7 @@
         @endif
         <div class="row">
             <div class="col-sm-6">
-                <h4 class="mb-3 fw-bold">Add new <u>category</u></h4>
+                <h4 class="mb-3 fw-bold">Add new <u>box category</u></h4>
                 <form method="POST" action="{{route('box.category.add')}}">
                     @csrf
                     {{--name--}}
