@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/homepage/boxes', [\App\Http\Controllers\DefaultController::class, 'index'])
     ->name('default');
 
+Route::get('/homepage/box/{id}', [\App\Http\Controllers\DefaultController::class, 'show'])
+    ->name('homepage.box');
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
         return view('dashboard');

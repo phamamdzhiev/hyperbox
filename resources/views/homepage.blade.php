@@ -9,6 +9,7 @@
     <div class="homepage-wrapper">
         @forelse($boxes as $box)
             @include('components.box-singleton', [
+    'id' => $box->id,
     'title' => $box->title,
     'price' => $box->price,
     'category' => $box->category_name,

@@ -1,0 +1,63 @@
+.box-intro .img-wrapper {
+    flex: 0 0 300px;
+}
+
+.box-intro .img-wrapper img {
+    transition: transform 125ms ease-in;
+    transform-origin: center center;
+}
+
+.box-intro .img-wrapper:hover img {
+    transform: rotate(-7deg);
+}
+
+.main-button {
+    background-color: var(--main-cyan);
+    border-radius: 0;
+    padding: 10px 25px;
+    color: white;
+    display: inline-block;
+    transition: background-color 125ms ease-in;
+}
+
+.secondary-button {
+    background-color: var(--main-green);
+    border-radius: 0;
+    padding: 10px 25px;
+    color: white;
+    display: inline-block;
+    transition: background-color 125ms ease-in;
+}
+
+.secondary-button.dis {
+    opacity: 0.5;
+    cursor: not-allowed;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+
+.secondary-button:hover ~ #hoverable {
+    display: block;
+}
+
+#hoverable {
+    display: none;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+}
+
+.main-button:hover {
+    background-color: var(--main-cyan-dark);
+}
+
+#tracking-id {
+    width: 100%;
+    font-size: 10px;
+    color: #303c61;
+    text-align: center;
+    margin-top: 10px;
+}

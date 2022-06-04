@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Box;
 use App\Models\Category;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -22,10 +23,16 @@ class DefaultController extends Controller
             ->when($category, function ($query) use ($category) {
                 $query->where('b.category_id', '=', $category);
             })
-            ->select(['title', 'price', 'badge', 'image', 'name as category_name'])
+            ->select(['b.id', 'title', 'price', 'badge', 'image', 'name as category_name'])
             ->get();
 
 
         return view('homepage', compact('boxes', 'categories'));
+    }
+
+    public function show(Request $request, $id): Factory|View|Application
+    {
+        $box = Box::findOrFail($id);
+        return view('single-box', compact('box'));
     }
 }

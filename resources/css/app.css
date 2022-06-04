@@ -1,5 +1,6 @@
 @import "header.css";
 @import "box-singleton.css";
+@import "box-page.css";
 @import "categories.css";
 @import "footer.css";
 
@@ -8,6 +9,8 @@
     --main-color: #192036;
     --main-color-light: #1f2643;
     --main-color-lighter: #38405c;
+    --main-cyan: #3d789d;
+    --main-cyan-dark: #2a6386;
     --main-green: #4ebb54;
     --main-hot: #db3232;
     --white: #fff;
