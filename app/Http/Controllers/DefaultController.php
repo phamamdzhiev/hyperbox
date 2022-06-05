@@ -35,7 +35,7 @@ class DefaultController extends Controller
         $itemsInsideBox = DB::table('items as i')
             ->join('box_items as bi', 'i.id', '=', 'bi.item_id')
             ->where('box_id', '=', $id)
-            ->select('title', 'price', 'image')
+            ->select('title', 'price', 'image', 'desc')
             ->distinct()
             ->get();
         return view('single-box', compact(['box', 'itemsInsideBox']));

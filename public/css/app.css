@@ -105,7 +105,7 @@ header#__main_header {
 }
 
 .box-singleton {
-    background-color: #1f2643;
+    background-color: var(--main-color-light);
     padding: 20px;
     overflow: hidden;
 }
@@ -195,6 +195,14 @@ header#__main_header {
     flex: 0 0 300px;
 }
 
+.box-intro .actions {
+    margin-left: 1rem;
+}
+
+.box-intro #order > button {
+    margin-right: 1rem;
+}
+
 .box-intro .img-wrapper img {
     transition: transform 125ms ease-in;
     transform-origin: center center;
@@ -243,6 +251,7 @@ header#__main_header {
     font-weight: bold;
 }
 
+
 .main-button:hover {
     background-color: var(--main-cyan-dark);
 }
@@ -253,6 +262,43 @@ header#__main_header {
     color: #303c61;
     text-align: center;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #hoverable {
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+    }
+
+    .box-intro,
+    #order {
+        flex-direction: column;
+    }
+
+    .box-intro .actions {
+        margin-left: 0;
+    }
+
+    .box-intro #order button {
+        font-size: 14px;
+    }
+
+    .box-intro #order > button {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .box-intro #order > button ~ .position-relative,
+    .box-intro #order > button ~ .position-relative > button {
+        width: 100%;
+    }
+
+    .box-intro .img-wrapper {
+        flex: initial;
+        margin-bottom: 1rem;
+    }
 }
 
 .categories {
@@ -314,6 +360,48 @@ header#__main_header {
 #features .heading {
     margin-bottom: 10px;
 }
+
+
+@media screen and (max-width: 768px) {
+    #features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.item-opening-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item-opening-wrapper .item {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--main-color-light);
+}
+
+.item-opening-wrapper #price {
+    padding: 5px;
+    background-color: var(--main-green);
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .item-opening-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .item-opening-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 footer#__footer {
     background-color: var(--main-color-dark);
@@ -462,13 +550,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a {
 
 @media screen and (max-width: 576px) {
     .homepage-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .homepage-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
 

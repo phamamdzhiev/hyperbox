@@ -3,6 +3,7 @@
 @import "box-page.css";
 @import "categories.css";
 @import "partials/features.css";
+@import "partials/opening-items.css";
 @import "footer.css";
 
 :root {
@@ -89,12 +90,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a {
 
 @media screen and (max-width: 576px) {
     .homepage-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .homepage-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+

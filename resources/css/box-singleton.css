@@ -1,5 +1,5 @@
 .box-singleton {
-    background-color: #1f2643;
+    background-color: var(--main-color-light);
     padding: 20px;
     overflow: hidden;
 }

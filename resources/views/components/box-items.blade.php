@@ -1,11 +1,24 @@
-@forelse($itemsInsideBox as $item)
-    <div class="p-3 m-3">
-        <img width="175" class="img-fluid d-block" src="{{asset('storage/' . $item->image)}}" alt="{{env('APP_NAME') . ' ' . $item->title}}">
-        Title: {{$item->title}} <br/> Price: {{$item->price}} BGN
-    </div>
-@empty
-    <h5>Няма свързани продукти!</h5>
-@endforelse
+<div class="item-opening-wrapper my-3">
+    @forelse($itemsInsideBox as $item)
+        <div class="item p-3">
+            <div class="img-wrapper mb-3">
+                <img class="img-fluid" src="{{asset('storage/' . $item->image)}}"
+                     alt="{{env('APP_NAME') . ' ' . $item->title}}">
+            </div>
+            <div class="info">
+                <h5 class="fw-bold text-white">{{$item->title}}</h5>
+                <p class="">
+                    {{$item->desc}}
+                </p>
+                <p id="price">
+                    {{$item->price}} BGN
+                </p>
+            </div>
+        </div>
+    @empty
+        <h5>Няма свързани продукти!</h5>
+    @endforelse
+</div>
 
 
 {{--

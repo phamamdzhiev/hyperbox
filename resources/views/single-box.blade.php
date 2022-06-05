@@ -12,7 +12,7 @@
                      src="https://static.ancientgaming.io/images/HypeDrop_Summer%20trees_Box_Design_Export.png"
                      alt="">
             </div>
-            <div class="actions ms-3">
+            <div class="actions">
                 <h3 class="fw-bold text-uppercase text-white">
                     {{$box->title}}
                 </h3>
@@ -20,7 +20,7 @@
                     {{$box->desc}}
                 </p>
                 <div class="d-flex align-items-center" id="order">
-                    <button class="btn main-button fw-bold text-white d-flex align-items-center me-3">
+                    <button class="btn main-button fw-bold text-white d-flex align-items-center">
                             <span>
                                 <svg class="d-block" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -58,12 +58,12 @@
             </h5>
             @include('components.box-items')
         </div>
-        <div id="last-opened" class="mb-5">
-            <h5 class="text-white text-uppercase fw-bold">
-                ПОСЛЕДНО ОТВОРЕНИ
-            </h5>
-            @include('components.last-opened')
-        </div>
+{{--        <div id="last-opened" class="mb-5">--}}
+{{--            <h5 class="text-white text-uppercase fw-bold">--}}
+{{--                ПОСЛЕДНО ОТВОРЕНИ--}}
+{{--            </h5>--}}
+{{--            @include('components.last-opened')--}}
+{{--        </div>--}}
         @include('components.features')
     </div>
 @endsection

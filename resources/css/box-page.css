@@ -2,6 +2,14 @@
     flex: 0 0 300px;
 }
 
+.box-intro .actions {
+    margin-left: 1rem;
+}
+
+.box-intro #order > button {
+    margin-right: 1rem;
+}
+
 .box-intro .img-wrapper img {
     transition: transform 125ms ease-in;
     transform-origin: center center;
@@ -50,6 +58,7 @@
     font-weight: bold;
 }
 
+
 .main-button:hover {
     background-color: var(--main-cyan-dark);
 }
@@ -60,4 +69,41 @@
     color: #303c61;
     text-align: center;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #hoverable {
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+    }
+
+    .box-intro,
+    #order {
+        flex-direction: column;
+    }
+
+    .box-intro .actions {
+        margin-left: 0;
+    }
+
+    .box-intro #order button {
+        font-size: 14px;
+    }
+
+    .box-intro #order > button {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .box-intro #order > button ~ .position-relative,
+    .box-intro #order > button ~ .position-relative > button {
+        width: 100%;
+    }
+
+    .box-intro .img-wrapper {
+        flex: initial;
+        margin-bottom: 1rem;
+    }
 }
