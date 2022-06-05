@@ -40,6 +40,8 @@ Route::get('/boxes/show/{id}', [\App\Http\Controllers\BoxController::class, 'sho
     ->name('box.show.single');
 Route::post('/boxes/add', [\App\Http\Controllers\BoxController::class, 'store'])
     ->name('box.add');
+Route::post('/box/select-items', [\App\Http\Controllers\BoxController::class, 'selectBoxItems'])
+    ->name('box.select.items');
 //Items
 Route::get('/items', [\App\Http\Controllers\ItemController::class, 'index'])
     ->name('items');;

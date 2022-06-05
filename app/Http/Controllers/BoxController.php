@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Badge;
 use App\Models\Box;
+use App\Models\BoxItems;
 use App\Models\Category;
 use App\Models\Item;
 use Exception;
@@ -93,7 +94,8 @@ class BoxController extends Controller
     public function show($id): View|Factory|Application
     {
         $box = Box::findOrFail($id);
-        return view('auth.box-single', compact('box'));
+        $items = Item::where('category_id', '=', $box->category_id)->get();
+        return view('auth.box-single', compact(['items', 'box']));
     }
 
     /**
@@ -128,5 +130,32 @@ class BoxController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function selectBoxItems(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'box_id' => 'required',
+            'items' => 'required'
+        ]);
+
+        $input = $request->input('items');
+
+        try {
+            foreach ($input as $c) {
+                BoxItems::create([
+                    'box_id' => $request->input('box_id'),
+                    'item_id' => $c
+                ]);
+            }
+
+            return back()->with('status', 'Item(s) selected!');
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+
     }
 }

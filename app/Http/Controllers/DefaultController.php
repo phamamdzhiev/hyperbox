@@ -26,13 +26,18 @@ class DefaultController extends Controller
             ->select(['b.id', 'title', 'price', 'badge', 'image', 'name as category_name'])
             ->get();
 
-
-        return view('homepage', compact('boxes', 'categories'));
+        return view('homepage', compact(['boxes', 'categories']));
     }
 
     public function show(Request $request, $id): Factory|View|Application
     {
         $box = Box::findOrFail($id);
-        return view('single-box', compact('box'));
+        $itemsInsideBox = DB::table('items as i')
+            ->join('box_items as bi', 'i.id', '=', 'bi.item_id')
+            ->where('box_id', '=', $id)
+            ->select('title', 'price', 'image')
+            ->distinct()
+            ->get();
+        return view('single-box', compact(['box', 'itemsInsideBox']));
     }
 }
