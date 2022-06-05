@@ -21,7 +21,8 @@ class ItemController extends Controller
      */
     public function index(): View|Factory|Application
     {
-        return view('auth.items');
+        $categories = Category::all();
+        return view('auth.items', compact('categories'));
     }
 
     /**
@@ -49,6 +50,7 @@ class ItemController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg|max:5120', // max 5MB
             'real_price' => 'required|numeric',
             'cat_number' => 'required',
+            'item_category' => 'required',
             'link' => 'required',
             'owner_number' => 'required|numeric',
             'owner_email' => 'required|email',
@@ -66,7 +68,8 @@ class ItemController extends Controller
                 'shop_category_number' => $request->input('cat_number'),
                 'owner_number' => $request->input('owner_number'),
                 'owner_email' => $request->input('owner_email'),
-                'tracking_id' => sprintf('%s%s', time(), \Illuminate\Support\Str::random(8))
+                'tracking_id' => sprintf('%s%s', time(), \Illuminate\Support\Str::random(8)),
+                'category_id' => $request->input('item_category')
             ]);
 
             return back()->with('status', 'Item added!');

@@ -52,5 +52,18 @@
                 </div>
             </div>
         </div>
+        <div id="box-items" class="mb-5">
+            <h5 class="text-white text-uppercase fw-bold">
+                ПРОДУКТИ В КУТИЯТА
+            </h5>
+            @include('components.box-items')
+        </div>
+        <div id="last-opened" class="mb-5">
+            <h5 class="text-white text-uppercase fw-bold">
+                ПОСЛЕДНО ОТВОРЕНИ
+            </h5>
+            @include('components.last-opened')
+        </div>
+        @include('components.features')
     </div>
 @endsection

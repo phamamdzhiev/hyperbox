@@ -37,7 +37,7 @@
                         <select class="form-select" name="item_box" id="item">
                             @foreach($items as $item)
                                 <option id="2" value="{{$item->id}}">({{$item->id}}) {{$item->title}}
-                                    - {{$item->price . ' BGN'}} - кат. номер {{$item->shop_badge_number}}</option>
+                                    - {{$item->price . ' BGN'}} - кат. номер {{$item->shop_category_number}}| Кат: {{$item->category_id}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -46,13 +46,18 @@
                         <label for="price">Box price</label>
                         <input type="text" value="{{ old('price') }}" class="form-control" name="price" id="price">
                     </div>
+                    {{--                    Price diff --}}
+                    <div class="mb-3">
+                        <label for="price_diff">Price diff</label>
+                        <input type="number" value="{{ old('price_diff') }}" class="form-control" name="price_diff" id="price_diff">
+                    </div>
 
                     {{--                    Category --}}
                     <div class="mb-3">
                         <label for="item-box_category">Box category</label>
                         <select class="form-select" name="box_category" id="item-box_category">
                             @foreach($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}} (/{{$category->slug}})</option>
+                                <option value="{{$category->id}}">{{$category->name}} (/{{$category->slug}})| Кат: {{$category->id}}</option>
                             @endforeach
                         </select>
                     </div>

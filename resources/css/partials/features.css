@@ -1,0 +1,32 @@
+#features {
+    background-color: #1a202c;
+    padding: 40px 20px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+#features .feature {
+    flex-direction: column;
+}
+
+#features .feature .img-wrapper img {
+    transition: transform 125ms ease-in;
+
+}
+
+#features .feature:hover .img-wrapper img {
+    transform: scale(1.1);
+    transform-origin: center center;
+}
+
+#features .feature .img-wrapper {
+    margin-bottom: 15px;
+
+}
+
+#features .heading {
+    margin-bottom: 10px;
+}

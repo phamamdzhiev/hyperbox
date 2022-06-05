@@ -73,7 +73,7 @@ class BoxController extends Controller
                 'category_id' => $request->input('box_category'),
                 'price' => $request->input('price'),
                 'badge' => $request->input('badge'),
-//                'price_diff' => 0, // temp solution
+                'price_diff' => $request->input('price_diff'),
                 'discount' => 0,
                 'tracking_id' => sprintf('%s%s', time(), Str::random(8))
             ]);

@@ -107,6 +107,7 @@ header#__main_header {
 .box-singleton {
     background-color: #1f2643;
     padding: 20px;
+    overflow: hidden;
 }
 
 #box-actions .heading {
@@ -120,11 +121,14 @@ header#__main_header {
 
 #box-image-wrapper img {
     transition: transform 150ms ease-in;
-    transform-origin: center center;
 }
 
 #box-image-wrapper:hover img {
-    transform: rotate(-7deg) scale(1.1);
+    transform: rotate(-5deg) scale(1.1);
+}
+
+#box-image-wrapper:hover .overlay-icon {
+    opacity: 1;
 }
 
 .box-singleton #price {
@@ -144,19 +148,48 @@ header#__main_header {
     color: white;
     border-radius: 0;
 }
+
 .badge.hot {
     background-color: var(--main-hot);
 }
+
 .badge.new {
     background-color: #25942a;
 }
+
 .badge.featured {
     background-color: rgb(61, 120, 157);
 }
+
 .badge.free {
     background-color: rgb(229, 143, 11);
 }
 
+.overlay-icon {
+    position: absolute;
+    padding: 1rem;
+    border-radius: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    opacity: 0;
+}
+
+.overlay-icon #blurred {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, .3);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+}
 
 .box-intro .img-wrapper {
     flex: 0 0 300px;
@@ -247,6 +280,39 @@ header#__main_header {
 .categories .box-category:hover,
 .categories .box-category.active {
     background-color: var(--main-green);
+}
+
+#features {
+    background-color: #1a202c;
+    padding: 40px 20px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+#features .feature {
+    flex-direction: column;
+}
+
+#features .feature .img-wrapper img {
+    transition: transform 125ms ease-in;
+
+}
+
+#features .feature:hover .img-wrapper img {
+    transform: scale(1.1);
+    transform-origin: center center;
+}
+
+#features .feature .img-wrapper {
+    margin-bottom: 15px;
+
+}
+
+#features .heading {
+    margin-bottom: 10px;
 }
 
 footer#__footer {

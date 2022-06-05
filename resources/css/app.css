@@ -2,6 +2,7 @@
 @import "box-singleton.css";
 @import "box-page.css";
 @import "categories.css";
+@import "partials/features.css";
 @import "footer.css";
 
 :root {

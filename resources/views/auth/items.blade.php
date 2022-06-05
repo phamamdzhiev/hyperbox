@@ -31,6 +31,15 @@
                         <label for="Image" class="form-label">Image</label>
                         <input class="form-control" type="file" name="image" id="Image"/>
                     </div>
+                    {{--                    Category --}}
+                    <div class="mb-3">
+                        <label for="item_category">Item category</label>
+                        <select class="form-select" name="item_category" id="item_category">
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}} (/{{$category->slug}})</option>
+                            @endforeach
+                        </select>
+                    </div>
                     {{--                    Real Price --}}
                     <div class="mb-3">
                         <label for="real_price" class="form-label">Real price</label>

@@ -1,6 +1,7 @@
 .box-singleton {
     background-color: #1f2643;
     padding: 20px;
+    overflow: hidden;
 }
 
 #box-actions .heading {
@@ -14,11 +15,14 @@
 
 #box-image-wrapper img {
     transition: transform 150ms ease-in;
-    transform-origin: center center;
 }
 
 #box-image-wrapper:hover img {
-    transform: rotate(-7deg) scale(1.1);
+    transform: rotate(-5deg) scale(1.1);
+}
+
+#box-image-wrapper:hover .overlay-icon {
+    opacity: 1;
 }
 
 .box-singleton #price {
@@ -38,16 +42,44 @@
     color: white;
     border-radius: 0;
 }
+
 .badge.hot {
     background-color: var(--main-hot);
 }
+
 .badge.new {
     background-color: #25942a;
 }
+
 .badge.featured {
     background-color: rgb(61, 120, 157);
 }
+
 .badge.free {
     background-color: rgb(229, 143, 11);
 }
 
+.overlay-icon {
+    position: absolute;
+    padding: 1rem;
+    border-radius: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    opacity: 0;
+}
+
+.overlay-icon #blurred {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(8px);
+}

@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->longText('desc');
             $table->string('price');
             $table->string('badge')->nullable();
-            $table->string('price_diff')->nullable();
+            $table->bigInteger('price_diff')->nullable();
             $table->boolean('is_opened')->default(false);
             $table->boolean('is_ordered')->default(false);
             $table->boolean('is_shipped')->default(false);
