@@ -2,6 +2,7 @@
 @import "box-singleton.css";
 @import "box-page.css";
 @import "categories.css";
+@import "deliveries.css";
 @import "partials/features.css";
 @import "partials/opening-items.css";
 @import "footer.css";
@@ -13,7 +14,7 @@
     --main-color-lighter: #38405c;
     --main-cyan: #3d789d;
     --main-cyan-dark: #2a6386;
-    --main-green: #4ebb54;
+    --main-green: #3e9f45;
     --main-hot: #db3232;
     --white: #fff;
     --grayish: #a8a8b2;

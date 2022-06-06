@@ -1,6 +1,11 @@
 @extends('welcome')
 
 @section('main')
+    @if (session('delivery'))
+        <div class="my-5" id="delivery-success" role="alert">
+            {{ session('delivery') }}
+        </div>
+    @endif
     <h3 class="fw-bold text-white my-5">
         MYSTERY BOX
     </h3>

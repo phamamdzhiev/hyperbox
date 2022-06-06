@@ -328,6 +328,72 @@ header#__main_header {
     background-color: var(--main-green);
 }
 
+#delivery-form-wrapper {
+    max-width: 500px;
+    margin: auto;
+}
+
+
+#submit-delivery-form-btn {
+    background-color: var(--main-green);
+    padding: 10px 15px;
+    border-radius: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    transition: background-color 175ms ease-in;
+}
+
+#delivery-form input.form-control {
+    border-radius: 0;
+    border: 0;
+    padding: 10px 15px;
+    background-color: var(--main-color-lighter);
+    color: white;
+}
+
+#delivery-form input.form-control:focus {
+    box-shadow: none;
+    outline: 3px solid var(--main-green);
+}
+
+#delivery-form input.form-control::-moz-placeholder {
+    color: white;
+    opacity: .7;
+}
+
+#delivery-form input.form-control:-ms-input-placeholder {
+    color: white;
+    opacity: .7;
+}
+
+#delivery-form input.form-control::placeholder {
+    color: white;
+    opacity: .7;
+}
+
+#submit-delivery-form-btn:hover {
+    background-color: #26792b;
+}
+
+/*delivery success alert*/
+#delivery-success,
+.form-error{
+    background-color: var(--main-green);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*delivery success error*/
+.form-error {
+    background-color: #cc0000;
+    font-size: 16px;
+}
+
 #features {
     background-color: #1a202c;
     padding: 40px 20px;
@@ -473,7 +539,7 @@ footer#__footer {
     --main-color-lighter: #38405c;
     --main-cyan: #3d789d;
     --main-cyan-dark: #2a6386;
-    --main-green: #4ebb54;
+    --main-green: #3e9f45;
     --main-hot: #db3232;
     --white: #fff;
     --grayish: #a8a8b2;

@@ -54,6 +54,12 @@ Route::get('/badges', [\App\Http\Controllers\BadgeController::class, 'index'])
 Route::post('/badge/add', [\App\Http\Controllers\BadgeController::class, 'store'])
     ->name('badge.add');
 
+//Deliveries
+Route::get('/delivery/box/{id}', [\App\Http\Controllers\DeliveryController::class, 'show'])
+    ->name('delivery.box.get');;
+Route::post('/delivery/box/{id}', [\App\Http\Controllers\DeliveryController::class, 'store'])
+    ->name('delivery.box.post');
+
 //Affiliates
 Route::get('/affiliates', function () {
     return view('affiliates');

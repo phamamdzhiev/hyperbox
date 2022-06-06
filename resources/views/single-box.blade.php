@@ -30,9 +30,9 @@
                                 <path d="M15 15V8H9V15H15Z" fill="currentColor"></path>
                             </svg>
                             </span>
-                        <span class="ps-2 text-uppercase">
-                             Поръчай сега за {{$box->price}} BGN
-                            </span>
+                        <a class="text-white ps-2 text-uppercase" href="{{route('delivery.box.get', $box->id)}}">
+                            Поръчай сега за {{$box->price}} BGN
+                        </a>
                     </button>
                     <div class=" position-relative">
                         <button class="btn secondary-button fw-bold text-white text-uppercase dis">
@@ -58,12 +58,12 @@
             </h5>
             @include('components.box-items')
         </div>
-{{--        <div id="last-opened" class="mb-5">--}}
-{{--            <h5 class="text-white text-uppercase fw-bold">--}}
-{{--                ПОСЛЕДНО ОТВОРЕНИ--}}
-{{--            </h5>--}}
-{{--            @include('components.last-opened')--}}
-{{--        </div>--}}
+        {{--        <div id="last-opened" class="mb-5">--}}
+        {{--            <h5 class="text-white text-uppercase fw-bold">--}}
+        {{--                ПОСЛЕДНО ОТВОРЕНИ--}}
+        {{--            </h5>--}}
+        {{--            @include('components.last-opened')--}}
+        {{--        </div>--}}
         @include('components.features')
     </div>
 @endsection
