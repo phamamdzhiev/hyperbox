@@ -45,7 +45,8 @@
 }
 
 
-.secondary-button:hover ~ #hoverable {
+.secondary-button:hover ~ #hoverable,
+.secondary-button:focus ~ #hoverable {
     display: block;
 }
 

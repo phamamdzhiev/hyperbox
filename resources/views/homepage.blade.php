@@ -6,8 +6,8 @@
             {{ session('delivery') }}
         </div>
     @endif
-    <h3 class="fw-bold text-white my-5">
-        MYSTERY BOX
+    <h3 class="fw-bold text-white my-5 text-uppercase">
+        MYSTERY BOXES
     </h3>
     @include('components.categories', [
 'categories' => $categories])

@@ -394,6 +394,14 @@ header#__main_header {
     font-size: 16px;
 }
 
+#how_it_works_section .inner-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 998px;
+    margin: auto;
+}
+
 #features {
     background-color: #1a202c;
     padding: 40px 20px;
